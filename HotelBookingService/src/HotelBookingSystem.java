@@ -240,8 +240,9 @@ public class HotelBookingSystem {
 		Scanner scanner = new Scanner(System.in);
 		boolean IsBreakfast = false; //초기화 
 		int currentTotalPrice = 0;
+		int numPeople = 0;
 		
-		String sql = "SELECT IsBreakfast,TotalPrice FROM Reservation WHERE ReservationID = ?";
+		String sql = "SELECT IsBreakfast,TotalPrice, PeopleNum FROM Reservation WHERE ReservationID = ?";
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, ReservationID);
@@ -249,6 +250,7 @@ public class HotelBookingSystem {
             if (rs.next()) {
                 IsBreakfast = rs.getBoolean("IsBreakfast");
                 currentTotalPrice = rs.getInt("TotalPrice");
+                numPeople = rs.getInt("PeopleNum");
             } else {
             	System.out.println("Reservation not found");
             	return;
@@ -268,7 +270,7 @@ public class HotelBookingSystem {
         	IsBreakfast = !IsBreakfast; // 아침 식사 옵션 반전
         	
         	int priceChange = IsBreakfast ? 10000 : -10000;
-            int updatedTotalPrice = currentTotalPrice + priceChange;
+            int updatedTotalPrice = currentTotalPrice + priceChange * numPeople;
             
             String updateSql = "UPDATE Reservation SET IsBreakfast = ?, TotalPrice = ? WHERE ReservationID = ?";
             try (Connection conn = connect();
