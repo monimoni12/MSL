@@ -8,7 +8,7 @@ The application will allow users to retrieve, insert, update, and delete data in
 
 ### Application user interface
 - text-based user interface
-- results of queries may also be text-based table format
+- results of queries are in text-based table format
 
 </br>
 
