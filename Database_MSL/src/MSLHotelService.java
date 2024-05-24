@@ -50,6 +50,8 @@ public class MSLHotelService {
 		    displayMenu();
 		    Scanner scanner = new Scanner(System.in);
 		    int choice = scanner.nextInt();
+		    scanner.nextLine(); // Consume newline character
+		    
 		    switch (choice) {
 		        case 1:
 		            searchCustomer(conn);
@@ -76,6 +78,21 @@ public class MSLHotelService {
 		            searchRoomAvailability(conn);
 		            break;
 		        case 9:
+                    queryRoomTypePriceStats(conn, scanner);
+                    break;
+                case 10:
+                    queryRoomCapacityPriceStats(conn, scanner);
+                    break;
+                case 11:
+                    queryBedTypePriceStats(conn, scanner);
+                    break;
+                case 12:
+                    queryViewTypePriceStats(conn, scanner);
+                    break;
+                case 13:
+                    queryCustomerReservationsByPhone(conn, scanner);
+                    break;
+		        case 14:
 		            return; // 프로그램 종료
 		        default:
 		            System.out.println("Invalid choice. Please try again.");
@@ -85,16 +102,21 @@ public class MSLHotelService {
 
     static void displayMenu() {
         System.out.println("\nMenu:");
-        System.out.println("1. Search Customer");
-        System.out.println("2. Make Reservation");
-        System.out.println("3. Search Reservation");
-        System.out.println("4. Update Reservation");
-        System.out.println("5. Cancel Reservation");
-        System.out.println("6. Search Check-In Date");
-        System.out.println("7. Search Room Type");
-        System.out.println("8. Search Room Availability");
-        System.out.println("9. Exit");
-        System.out.print("Enter your choice: ");
+        System.out.println("1. Search customer by ID or name");
+        System.out.println("2. Make a room reservation");
+        System.out.println("3. Search reservations by customer ID");
+        System.out.println("4. Update a reservation");
+        System.out.println("5. Cancel a reservation");
+        System.out.println("6. Search reservations by check-in date");
+        System.out.println("7. View room types");
+        System.out.println("8. View available rooms");
+        System.out.println("9. View minimum and average room prices by Room Type");
+        System.out.println("10. View minimum and average room prices by Capacity");
+        System.out.println("11. View minimum and average room prices by Bed Type");
+        System.out.println("12. View minimum and average room prices by View Type");
+        System.out.println("13. View customer's total reservations, rooms, and spending");
+        System.out.println("14. Exit program");
+        System.out.print("Enter choice: ");
     }
 
     public static int getCustomerIndex(Connection conn) throws SQLException {
@@ -128,7 +150,7 @@ public class MSLHotelService {
             }
 
             ResultSet resultSet = preparedStatement.executeQuery();
-            System.out.println("Customer Details:");
+            System.out.println("고객 조회 결과:");
             System.out.println("-----------------------------------------------------------------------------------------------------------");
             System.out.printf("%-15s | %-20s | %-25s | %-10s | %-15s | %-10s\n",
                     "CustomerID", "CustomerName", "DateOfBirth", "Address", "PhoneNumber", "Index");
@@ -149,51 +171,65 @@ public class MSLHotelService {
         }
     }
 
-    //예약하기
+    // 예약하기
     public static void insertReservation(Connection conn) {
-    	Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         try {
             System.out.print("Enter Customer ID:");
             String customerID = scanner.nextLine();
 
-            // 고객 ID 존재 여부 확인
+            // Check if customer ID exists
             if (!customerExists(conn, customerID)) {
-                System.out.println("Customer ID does not exist.");
+                System.out.println("The Customer ID does not exist");
                 return;
             }
             
             System.out.print("Enter Room ID:");
             int roomID = scanner.nextInt();
-            scanner.nextLine(); // 개행 문자 소비
+            scanner.nextLine(); // Consume newline character
 
-          //방값 계산
-            int Room_Price = 0;
-         // 방 ID 존재 여부 확인
+            // Calculate room price
+            int roomPrice = 0;
+            int roomCapacity = 0;
+            // Check if room ID exists
             if (!roomExists(conn, roomID)) {
-                System.out.println("Room ID does not exist.");
+                System.out.println("The Room ID does not exist");
                 return;
-            }
-            else {
-            	String sql_2 = "SELECT Price FROM Room WHERE RoomID = ?";
-            	try (PreparedStatement pstmt = conn.prepareStatement(sql_2)) {
-    	            pstmt.setInt(1, roomID);
-    	            
-    	            ResultSet rs = pstmt.executeQuery();
-    	            
-    	            if (rs.next()) {
-    	                
-    	                Room_Price = rs.getInt("Price");
-    	                
-    	            }
-    	        } catch (SQLException e) {
-    	            e.printStackTrace();
-    	        }
-    		System.out.println("Room Price per Day:" + Room_Price);
+            } else {
+                String sqlGetRoomPrice = "SELECT Price FROM Room WHERE RoomID = ?";
+                String sqlGetRoomCapacity = "SELECT Capacity FROM RoomType WHERE RoomID = ?";
+
+                try (PreparedStatement pstmtGetRoomPrice = conn.prepareStatement(sqlGetRoomPrice)) {
+                    pstmtGetRoomPrice.setInt(1, roomID);
+                    ResultSet rs = pstmtGetRoomPrice.executeQuery();
+                    if (rs.next()) {
+                        roomPrice = rs.getInt("Price");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Daily room rate for the selected room: " + roomPrice);
+
+                try (PreparedStatement pstmtGetRoomCapacity = conn.prepareStatement(sqlGetRoomCapacity)) {
+                    pstmtGetRoomCapacity.setInt(1, roomID);
+                    ResultSet rs = pstmtGetRoomCapacity.executeQuery();
+                    if (rs.next()) {
+                        roomCapacity = rs.getInt("Capacity");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Maximum occupancy for the selected room: " + roomCapacity);
             }
             
-            System.out.print("Enter number of people: ");
+            System.out.print("Number of people staying: ");
             int peopleNum = scanner.nextInt();
-            scanner.nextLine(); // 개행 문자 소비
+            scanner.nextLine(); // Consume newline character
+            
+            if(peopleNum > roomCapacity) {
+                System.out.println("The number of people exceeds the maximum occupancy of the selected room");
+                return;
+            }
             
             System.out.print("Enter Check-In Date (YYYY-MM-DD): ");
             String checkInDate = scanner.nextLine();
@@ -201,22 +237,21 @@ public class MSLHotelService {
             System.out.print("Enter Check-Out Date (YYYY-MM-DD): ");
             String checkOutDate = scanner.nextLine();
             
-    		
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             long daysBetween = ChronoUnit.DAYS.between(LocalDate.parse(checkInDate, formatter), LocalDate.parse(checkOutDate, formatter));
-            int totalPrice = Room_Price * (int) daysBetween;
+            int totalPrice = roomPrice * (int) daysBetween;
             
-            System.out.print("Is Breakfast Included? (true/false):");
+            System.out.print("Include breakfast? (true/false):");
             boolean isBreakfast = scanner.nextBoolean();
-            scanner.nextLine(); // 개행 문자 소비
+            scanner.nextLine(); // Consume newline character
 
             if (isRoomAvailable(roomID, checkInDate, checkOutDate)) {
                 if (isBreakfast) {
-                	totalPrice += 10000 * peopleNum; // Add breakfast cost
+                    totalPrice += 10000 * peopleNum; // Add breakfast cost
                 }
-                System.out.println("Total Price:" + totalPrice);
+                System.out.println("Total amount:" + totalPrice);
 
-                // 예약 ID 생성
+                // Generate reservation ID
                 int reservationID = 0;
                 String sqlGetMaxReservationID = "SELECT MAX(ReservationID) AS MaxID FROM Reservation";
                 try (PreparedStatement pstmtGetMaxReservationID = conn.prepareStatement(sqlGetMaxReservationID)) {
@@ -228,7 +263,7 @@ public class MSLHotelService {
                     e.printStackTrace();
                 }
                 
-             // 예약 정보 데이터베이스에 삽입
+                // Insert reservation information into the database
                 String sqlInsertReservation = "INSERT INTO Reservation (ReservationID, CustomerID, RoomID, CheckInDate, CheckOutDate, PeopleNum, TotalPrice, IsBreakfast) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                 try (PreparedStatement pstmtInsertReservation = conn.prepareStatement(sqlInsertReservation)) {
                     pstmtInsertReservation.setInt(1, reservationID);
@@ -242,26 +277,27 @@ public class MSLHotelService {
 
                     int affectedRows = pstmtInsertReservation.executeUpdate();
                     if (affectedRows > 0) {
-                        System.out.println("Reservation inserted successfully.");
+                        System.out.println("Reservation successful");
                     } else {
-                        System.out.println("Failed to insert reservation.");
+                        System.out.println("Reservation failed");
                     }
                 }
             } else {
-                System.out.println("Room is not available for the selected dates.");
+                System.out.println("Reservation is not available on the selected date");
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-    //예약 검색
+
+    // 예약 검색
     public static void searchReservation(Connection conn) {
         try {
-        	Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter CustomerID or CustomerName to search reservation (use * to show all): ");
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter CustomerID or CustomerName to search for reservations (use * to display all): ");
             String search = scanner.nextLine();
 
-         // 뷰 생성
+            // Create view
             String createViewSQL;
             if ("*".equals(search)) {
                 createViewSQL = "CREATE OR REPLACE VIEW SearchReservation AS " +
@@ -287,20 +323,20 @@ public class MSLHotelService {
                 createViewStmt.setString(1, search);
                 createViewStmt.setString(2, search);
             }
-            createViewStmt.executeUpdate(); // executeUpdate를 사용하여 뷰 생성
-            
-            // 뷰 생성 여부 확인
+            createViewStmt.executeUpdate(); // Use executeUpdate to create the view
+
+            // Check if view is created
             String checkViewSQL = "SELECT * FROM information_schema.VIEWS WHERE TABLE_NAME = 'SearchReservation'";
             Statement checkViewStmt = conn.createStatement();
             ResultSet checkViewResultSet = checkViewStmt.executeQuery(checkViewSQL);
-            
+
             if (checkViewResultSet.next()) {
                 System.out.println("View 'SearchReservation' created successfully.");
             } else {
                 System.out.println("Failed to create view 'SearchReservation'.");
             }
 
-            // 뷰 조회
+            // View query
             String selectSQL = "SELECT * FROM SearchReservation";
             Statement selectStmt = conn.createStatement();
             ResultSet resultSet = selectStmt.executeQuery(selectSQL);
@@ -322,14 +358,14 @@ public class MSLHotelService {
                     String bedType = resultSet.getString("BedType");
 
                     System.out.printf("%-15s | %-10s | %-20s | %-20s | %-10s | %-10s | %-15s | %-10s\n",
-                            reservationID, customerID,checkInDate, checkOutDate, peopleNum, totalPrice, roomTypeName, bedType);
+                            reservationID, customerID, checkInDate, checkOutDate, peopleNum, totalPrice, roomTypeName, bedType);
                 } while (resultSet.next());
                 System.out.println("---------------------------------------------------------------------------------------------------------------------------------");
             } else {
-                System.out.println("No reservations found for the given CustomerID or CustomerName.");
+                System.out.println("No reservations found for the entered CustomerID or CustomerName.");
             }
 
-            // 뷰 삭제
+            // Drop view
             String dropViewSQL = "DROP VIEW IF EXISTS SearchReservation";
             Statement dropViewStmt = conn.createStatement();
             dropViewStmt.executeUpdate(dropViewSQL);
@@ -338,6 +374,7 @@ public class MSLHotelService {
             e.printStackTrace();
         }
     }
+
 
     //예약 수정
     public static void updateReservation() {
@@ -925,4 +962,169 @@ public class MSLHotelService {
 	 }
 	 return false;
 	}
+	 
+    // 방 타입에 따라 최저, 평균 가격을 조회하는 메소드
+    private static void queryRoomTypePriceStats(Connection connection, Scanner scanner) {
+        try {
+            System.out.print("Enter the room type to query: ");
+            String roomType = scanner.nextLine();
+
+            String sql = "SELECT MIN(r.Price) AS LowestPrice, AVG(r.Price) AS AveragePrice " +
+                    "FROM Room r " +
+                    "JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID " +
+                    "WHERE rt.RoomTypeName = ?";
+
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, roomType);
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                	System.out.println("--------------------------------------------------------------------------");
+                    System.out.printf("%-20s | %-20s | %-20s \n", "Room Type","Lowest Price","Average Price");
+                    System.out.println("--------------------------------------------------------------------------");
+                    while (resultSet.next()) {
+                        double lowestPrice = resultSet.getDouble("LowestPrice");
+                        double averagePrice = resultSet.getDouble("AveragePrice");
+
+                        System.out.printf("%-20s | %-20f | %-20f\n", roomType, lowestPrice, averagePrice);
+                    }
+                    System.out.println("--------------------------------------------------------------------------");
+                }
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    // 방 인원에 따라 최저, 평균 가격을 조회하는 메소드
+    private static void queryRoomCapacityPriceStats(Connection connection, Scanner scanner) {
+        try {
+            System.out.print("Enter the room capacity to query: ");
+            int capacity = scanner.nextInt();
+            scanner.nextLine(); // Consume newline character
+
+            String sql = "SELECT MIN(r.Price) AS LowestPrice, AVG(r.Price) AS AveragePrice " +
+                    "FROM Room r " +
+                    "JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID " +
+                    "WHERE rt.Capacity = ?";
+
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setInt(1, capacity);
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                	System.out.println("--------------------------------------------------------------------------");
+                    System.out.printf("%-20s | %-20s | %-20s \n", "Room Capacity","Lowest Price","Average Price");
+                    System.out.println("--------------------------------------------------------------------------");
+                    while (resultSet.next()) {
+                        double lowestPrice = resultSet.getDouble("LowestPrice");
+                        double averagePrice = resultSet.getDouble("AveragePrice");
+
+                        System.out.printf("%-20d | %-20f | %-20f\n", capacity, lowestPrice, averagePrice);
+                    }
+                    System.out.println("--------------------------------------------------------------------------");
+                }
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    // 침대 타입에 따라 방의 최저, 평균 가격을 조회하는 메소드
+    private static void queryBedTypePriceStats(Connection connection, Scanner scanner) {
+        try {
+            System.out.print("Enter the bed type to query: ");
+            String bedType = scanner.nextLine();
+
+            String sql = "SELECT MIN(r.Price) AS LowestPrice, AVG(r.Price) AS AveragePrice " +
+                    "FROM Room r " +
+                    "JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID " +
+                    "WHERE rt.BedType = ?";
+
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, bedType);
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                	System.out.println("--------------------------------------------------------------------------");
+                	System.out.printf("%-20s | %-20s | %-20s \n", "Bed Type","Lowest Price","Average Price");
+                    System.out.println("--------------------------------------------------------------------------");
+                    while (resultSet.next()) {
+                        double lowestPrice = resultSet.getDouble("LowestPrice");
+                        double averagePrice = resultSet.getDouble("AveragePrice");
+
+                        System.out.printf("%-20s | %-20f | %-20f\n", bedType, lowestPrice, averagePrice);
+                    }
+                    System.out.println("--------------------------------------------------------------------------");
+                }
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    // 방의 뷰에 따라 최저, 평균 가격을 조회하는 메소드
+    private static void queryViewTypePriceStats(Connection connection, Scanner scanner) {
+        try {
+            System.out.print("Enter the view type to query: ");
+            String viewType = scanner.nextLine();
+
+            String sql = "SELECT MIN(r.Price) AS LowestPrice, AVG(r.Price) AS AveragePrice " +
+                    "FROM Room r " +
+                    "JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID " +
+                    "WHERE rt.View = ?";
+
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, viewType);
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                	System.out.println("--------------------------------------------------------------------------");
+                    System.out.printf("%-20s | %-20s | %-20s \n", "View Type","Lowest Price","Average Price");
+                    System.out.println("--------------------------------------------------------------------------");
+                    while (resultSet.next()) {
+                        double lowestPrice = resultSet.getDouble("LowestPrice");
+                        double averagePrice = resultSet.getDouble("AveragePrice");
+
+                        System.out.printf("%-20s | %-20f | %-20f\n", viewType, lowestPrice, averagePrice);
+                    }
+                }
+                System.out.println("--------------------------------------------------------------------------");
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    // 특정 고객의 총 예약 수와 총 예약한 방 수, 총 지출을 조회하는 메소드 (고객 전화번호로 검색)
+    private static void queryCustomerReservationsByPhone(Connection connection, Scanner scanner) {
+        try {
+            System.out.print("Enter the customer phone number: ");
+            String phoneNumber = scanner.nextLine();
+
+            String sql = "SELECT g.CustomerName, COUNT(r.ReservationID) AS NumberOfReservations, " +
+                    "COUNT(DISTINCT r.RoomID) AS NumberOfRooms, SUM(r.TotalPrice) AS TotalSpent " +
+                    "FROM Reservation r " +
+                    "JOIN Customers g ON r.CustomerID = g.CustomerID " +
+                    "WHERE g.PhoneNumber = ? " +
+                    "GROUP BY g.CustomerName";
+
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, phoneNumber);
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                	System.out.println("-------------------------------------------------------------------------------------------");
+                    System.out.printf("%-20s | %-25s | %-25s | %-10s\n","Customer Name","Total Reservations","Total Rooms Reserved","Total Spent");
+                    System.out.println("-------------------------------------------------------------------------------------------");
+                    while (resultSet.next()) {
+                        String name = resultSet.getString("CustomerName");
+                        int numberOfReservations = resultSet.getInt("NumberOfReservations");
+                        int numberOfRooms = resultSet.getInt("NumberOfRooms");
+                        double totalSpent = resultSet.getDouble("TotalSpent");
+
+                        System.out.printf("%-20s | %-25d | %-25d | %-10.0f\n", name, numberOfReservations, numberOfRooms, totalSpent);
+                    }
+                    System.out.println("-------------------------------------------------------------------------------------------");
+                }
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
 }
