@@ -1,7 +1,7 @@
 # Hotel Booking System
 #### 2024-spring-ewha-database-mini project
 
-The project is a hotel booking java application using JDBC and a MySQL database.
+This project is a hotel booking java application using JDBC and a MySQL database.
 The application will allow users to retrieve, insert, update, and delete data in the database.
 
 </br>
