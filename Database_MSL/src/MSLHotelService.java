@@ -19,10 +19,13 @@ public class MSLHotelService {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("(jdbc:mysql://localhost:3306/이_부분_입력) 접속할 주소를 입력하세요: ");
 		DB_URL = DB_URL + scanner.nextLine();
+		
 		System.out.print("USER를 입력하세요: (Default USER: root)");
-		if(scanner.nextLine() != "") {
-			USER = scanner.nextLine();
+		String temp = scanner.nextLine();
+		if(temp != "") {
+			USER = temp;
 		}
+		
 		System.out.print("비밀번호를 입력하세요: (없을 시 엔터)");
 		PASS = scanner.nextLine();
 	
@@ -119,17 +122,6 @@ public class MSLHotelService {
         System.out.print("Enter choice: ");
     }
 
-    public static int getCustomerIndex(Connection conn) throws SQLException {
-        String sql = "SELECT MAX(`Index`) FROM Customers";
-        Statement statement = conn.createStatement();
-        ResultSet resultSet = statement.executeQuery(sql);
-        int index = 1;
-        if (resultSet.next()) {
-            index = resultSet.getInt(1) + 1;
-        }
-        return index;
-    }
-
     //고객 검색
     public static void searchCustomer(Connection conn) {
         try {
@@ -152,8 +144,8 @@ public class MSLHotelService {
             ResultSet resultSet = preparedStatement.executeQuery();
             System.out.println("고객 조회 결과:");
             System.out.println("-----------------------------------------------------------------------------------------------------------");
-            System.out.printf("%-15s | %-20s | %-25s | %-10s | %-15s | %-10s\n",
-                    "CustomerID", "CustomerName", "DateOfBirth", "Address", "PhoneNumber", "Index");
+            System.out.printf("%-15s | %-20s | %-25s | %-10s | %-15s |\n",
+                    "CustomerID", "CustomerName", "DateOfBirth", "Address", "PhoneNumber");
             System.out.println("-----------------------------------------------------------------------------------------------------------");
             while (resultSet.next()) {
                 String customerID = resultSet.getString("CustomerID");
@@ -161,9 +153,8 @@ public class MSLHotelService {
                 String dateOfBirth = resultSet.getString("DateOfBirth");
                 String address = resultSet.getString("Address");
                 String phoneNumber = resultSet.getString("PhoneNumber");
-                int index = resultSet.getInt("Index");
-                System.out.printf("%-15s | %-20s | %-25s | %-10s | %-15s | %-10s\n",
-                                    customerID, customerName, dateOfBirth, address, phoneNumber, index);
+                System.out.printf("%-15s | %-20s | %-25s | %-10s | %-15s |\n",
+                                    customerID, customerName, dateOfBirth, address, phoneNumber);
             }
             System.out.println("-----------------------------------------------------------------------------------------------------------");
         } catch (SQLException e) {
