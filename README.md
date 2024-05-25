@@ -19,25 +19,25 @@ The application will allow users to retrieve, insert, update, and delete data in
 </br>데이터베이스 이름을 입력하면 된다.
 </br>
 
-![img.png](img.png)
+![img.png](readmepic/img.png)
 </br>
 
 ⌨️ 입력:
 </br>
 
-![img_1.png](img_1.png)
+![img_1.png](readmepic/img_1.png)
 </br></br>
 
 **USER 입력**
 </br>사용자 mysql user 아이디를 입력하면 된다.
-![img_3.png](img_3.png)
+![img_3.png](readmepic/img_3.png)
 </br></br>
 
 **비밀번호 입력**
 </br>사용자 mysql 패스워드를 입력하면 된다.
 </br>
 
-![img_4.png](img_4.png)
+![img_4.png](readmepic/img_4.png)
 </br>
 
 그러면 이렇게 사용자가 번호를 입력하면 동작하는 Menu가 등장한다. Enjoy MSLHotelService! 🍀
