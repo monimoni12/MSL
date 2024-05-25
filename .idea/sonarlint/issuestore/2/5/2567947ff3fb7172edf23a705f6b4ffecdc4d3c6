@@ -1,0 +1,390 @@
+
+Œ
+java:S1192‡"ÂDefine a constant instead of duplicating this literal "---------------------------------------------------------------------------------------------------------------------------------" 3 times.(ÙëÜ“şÿÿÿÿ8¼ß…öú1J$48831277-be2f-4ef6-9c8c-bc05a746703a
+–
+java:S1192ú"MDefine a constant instead of duplicating this literal "FROM Room r " 4 times.(Â± üÿÿÿÿ8¼ß…öú1J$a4f668d7-1a46-4d64-b8e3-bd7f7cf00ff6
+
+java:S1192†"UDefine a constant instead of duplicating this literal "Reservation Details:" 4 times.(Ş›³¨ÿÿÿÿÿ8‹¯¨÷ú1J$c89857a0-4bc7-4d53-860a-bff1b40ab0ac
+”
+java:S1192‰"KDefine a constant instead of duplicating this literal "PeopleNum" 11 times.(Ş—Ş·ıÿÿÿÿ8¯¨÷ú1J$0e3594d1-bd5f-4c28-908a-410968a7f7da
+Ã
+java:S1192Ë"zDefine a constant instead of duplicating this literal "r.CheckInDate, r.CheckOutDate, r.PeopleNum, r.TotalPrice " 5 times.(¼ğû®ùÿÿÿÿ8½ß…öú1J$f9a20bd5-9bfc-4635-bc91-b45364372dc8
+¶
+java:S1192â"rDefine a constant instead of duplicating this literal "JOIN RoomType rt ON rm.RoomTypeID = rt.RoomTypeID" 3 times.(Áë±ğ8½ß…öú1J$acc44a50-b428-42ed-b757-3557669f1f23
+
+java:S1192ß"TDefine a constant instead of duplicating this literal "FROM Reservation r " 8 times.(€ÿıàÿÿÿÿÿ8¾ß…öú1J$2a199045-1136-4507-b60e-58f476f2b013
+—
+java:S1192‰"NDefine a constant instead of duplicating this literal "CheckOutDate" 10 times.(Ş—Ş·ıÿÿÿÿ8¯¨÷ú1J$bce9b0d4-7636-4b51-a923-18f1ffcac8dd
+‘
+java:S1192‰"HDefine a constant instead of duplicating this literal "BedType" 4 times.(Ş—Ş·ıÿÿÿÿ8’¯¨÷ú1J$8272752e-62ad-4dd2-adb5-bd773eb22ad3
+¡
+java:S1192ƒ"XDefine a constant instead of duplicating this literal "%-20s | %-20s | %-20s 
+" 4 times.(îŸ’üÿÿÿÿ8¾ß…öú1J$3cdb5e3e-4361-43f5-a633-4b9944db6cdc
+Ç
+java:S1192ù"‚Define a constant instead of duplicating this literal "SELECT MIN(r.Price) AS LowestPrice, AVG(r.Price) AS AveragePrice " 4 times.(öíÜ¥8—¯¨÷ú1J$7fa64636-52f6-4049-91c9-3d953e527502
+×
+java:S1192Ê"’Define a constant instead of duplicating this literal "SELECT r.ReservationID, c.CustomerID, c.CustomerName, r.RoomID, rt.RoomTypeName, " 5 times.(€“æë8™¯¨÷ú1J$9b0471e5-b346-477a-8966-424b633a82ae
+»
+java:S1192û"rDefine a constant instead of duplicating this literal "JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID " 4 times.(ä”Ş®ÿÿÿÿÿ8¿ß…öú1J$7009a03e-d498-4224-b5c2-5c0711013495
+ 
+java:S1192‰"WDefine a constant instead of duplicating this literal "%-20s | %-20f | %-20f
+" 3 times.(–å—µûÿÿÿÿ8š¯¨÷ú1J$3c5506a0-c536-41fb-a785-bf93aec57251
+–
+java:S1192‰"MDefine a constant instead of duplicating this literal "CheckInDate" 10 times.(Ş—Ş·ıÿÿÿÿ8›¯¨÷ú1J$d4425e06-6c89-42e4-80d5-603e316a604e
+‘
+java:S1192”"MDefine a constant instead of duplicating this literal "CustomerName" 8 times.(™÷Äœ8Àß…öú1J$ab88b9c6-0f99-4836-815d-3b494a8a2f34
+—
+java:S1192ƒ"NDefine a constant instead of duplicating this literal "Average Price" 4 times.(îŸ’üÿÿÿÿ8›¯¨÷ú1J$0a834be6-6b07-405d-b766-414b2b8fafab
+
+java:S1192”"LDefine a constant instead of duplicating this literal "CustomerID" 12 times.(™÷Äœ8Àß…öú1J$c1349b52-d1ab-4b7b-928d-28ea3d73bcce
+•
+java:S1192Å"LDefine a constant instead of duplicating this literal "IsBreakfast" 3 times.(Æ´‘Ğùÿÿÿÿ8œ¯¨÷ú1J$96e2d961-5cea-4104-8ccc-493116823cab
+¸
+java:S1192Â"tDefine a constant instead of duplicating this literal "---------------------------------------------------" 3 times.(³‘Š×8¯¨÷ú1J$a9c80fe0-5e3c-4569-be1b-d7ee05d9a930
+Œ
+java:S1192—"HDefine a constant instead of duplicating this literal "RoomID" 10 times.(Üƒˆ©8¯¨÷ú1J$96943c37-7158-440c-9e1d-4e857d33919d
+•
+java:S1192‰"LDefine a constant instead of duplicating this literal "TotalPrice" 11 times.(Ş—Ş·ıÿÿÿÿ8¯¨÷ú1J$097631eb-de3e-438a-ac04-97283210ffdb
+¼
+java:S1192ê"sDefine a constant instead of duplicating this literal "JOIN RoomType rt ON rm.RoomTypeID = rt.RoomTypeID " 5 times.(ÊÏçûÿÿÿÿ8Ÿ¯¨÷ú1J$e659fc96-c310-4fc8-835f-a833ed4c8def
+—
+java:S1192‰"NDefine a constant instead of duplicating this literal "RoomTypeName" 10 times.(Ş—Ş·ıÿÿÿÿ8Ÿ¯¨÷ú1J$e8253f2e-8872-4f97-94e0-523a90789f4d
+Ö
+java:S1192‚"ŒDefine a constant instead of duplicating this literal "--------------------------------------------------------------------------" 12 times.(°Öüÿÿÿÿ8Ãß…öú1J$e962a38a-0b20-4e47-b582-d8e6b25906bb
+–
+java:S1192‡"MDefine a constant instead of duplicating this literal "AveragePrice" 4 times.(ƒú·•ùÿÿÿÿ8Ãß…öú1J$5193f6f7-2b45-442c-842c-b249113b08ba
+á
+java:S1192…	"œDefine a constant instead of duplicating this literal "-------------------------------------------------------------------------------------------" 3 times.(© éó8¡¯¨÷ú1J$5cf86da9-999e-498f-aa34-cefa23d9895d
+Š
+java:S1192Å"FDefine a constant instead of duplicating this literal "Price" 4 times.(Ñà†Î8Šß¿öú1J$5a9eb3b5-e6e2-4cd9-93c4-0902d42840d4
+œ
+java:S1192©"SDefine a constant instead of duplicating this literal "Enter Customer ID:" 3 times.(ùâñşÿÿÿÿ8ß¿öú1J$1fefe80a-8903-410a-a083-3a15aec67132
+ö
+java:S1192’"¬Define a constant instead of duplicating this literal "-----------------------------------------------------------------------------------------------------------" 3 times.(ÓÓÆ²ÿÿÿÿÿ8Äß…öú1J$f401d1f4-afac-4f63-9bbf-e2d886dbbda2
+•
+java:S1192†"LDefine a constant instead of duplicating this literal "LowestPrice" 4 times.(œõæ©ùÿÿÿÿ8¢¯¨÷ú1J$9fba91a3-5c4e-4bd3-99ba-2e2d5f0d871d
+ª
+java:S1192á"fDefine a constant instead of duplicating this literal "JOIN Room rm ON r.RoomID = rm.RoomID " 7 times.(ı˜æ…8Äß…öú1J$f93c68d4-f4dc-48b2-aab4-04c9b088a477
+µ
+java:S1192à"qDefine a constant instead of duplicating this literal "JOIN Customers c ON r.CustomerID = c.CustomerID " 7 times.(§¸éÈ8Åß…öú1J$c85276dc-1b5d-4712-95e9-5cc84b0e53bc
+–
+java:S1192ƒ"MDefine a constant instead of duplicating this literal "Lowest Price" 4 times.(îŸ’üÿÿÿÿ8£¯¨÷ú1J$3645a7bb-8703-4f6c-bf5c-7ccd24eb3b2c
+
+java:S1192ø"ÓDefine a constant instead of duplicating this literal "-------------------------------------------------------------------------------------------------------------------------------------------------" 12 times.(«§†Áüÿÿÿÿ8¤¯¨÷ú1J$ee03a62c-60e2-43a3-b761-573ce4779a72
+˜
+java:S1192‰"ODefine a constant instead of duplicating this literal "ReservationID" 10 times.(Ş—Ş·ıÿÿÿÿ8¤¯¨÷ú1J$16d5c347-9581-49e1-bfe2-c311d4789015
+~
+java:S1141Á"5Extract this nested try block into a separate method.(ºĞ»óûÿÿÿÿ8•ß¿öú1J$0b0180f4-533e-433e-898e-9b21c92525ab
+y
+java:S1141Ì"5Extract this nested try block into a separate method.(ºî¼­8–ß¿öú1J$5bb5805e-baca-4e0c-896c-df4530e930db
+~
+java:S1141…"5Extract this nested try block into a separate method.(áÉµúÿÿÿÿ8¦¯¨÷ú1J$49aaf92f-8141-4952-958c-4576dc86b9a5
+”	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âœ§×8§¯¨÷ú1J$23d8f4f0-4b5a-407e-bdbc-5b9f1528a2e2
+”	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—°È«8ı¥ûú1J$ed44f4a9-c3d5-45c8-9180-46ee28c5de65
+”	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•†À†8«¯¨÷ú1J$353f6d99-d8a5-40cd-9229-c450c0b6d19d
+”	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì¯‡¬8¬¯¨÷ú1J$454bbe7c-de55-4888-9dab-f0325c2773e8
+”	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÍ¼°8Éß…öú1J$1f6a5910-487c-4ce1-b3cd-526716908a31
+”	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óúŠæ8®¯¨÷ú1J$9aaddf2d-3b56-46bf-af94-dc9e4b5db909
+™	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”»Ãúÿÿÿÿ8¯¯¨÷ú1J$e8797775-fbc7-445c-bcc5-70d2f55e4a3c
+
+java:S4973"<Strings and Boxed types should be compared using "equals()".(‰‚¿8Ğß…öú1J$3f998b9c-17b6-4293-8d99-61d7afde1e95
+Š
+java:S2095Ó"GUse try-with-resources or close this "Statement" in a "finally" clause.(Š¢©H8í²¨÷ú1J$2f1e565f-9bbf-4d54-b97a-a13e47c98f6c
+Š
+java:S2095Œ"GUse try-with-resources or close this "Statement" in a "finally" clause.(Š¢©H8æ²¨÷ú1J$0c39cd83-896a-453f-bde8-b5a56d974d22
+˜
+java:S2095‹"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‡½«ªûÿÿÿÿ8ìæ…öú1J$e47e0968-fc57-46d4-b4c3-b29d910960cc
+“
+java:S2095Û"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÕŞöÁ8ú²¨÷ú1J$81df36fd-3421-4e18-be66-5014002e80b7
+“
+java:S2095®"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÕŞöÁ8ğ²¨÷ú1J$961ce60c-4007-4362-bed0-e502b75d170e
+
+java:S2095Â"GUse try-with-resources or close this "Statement" in a "finally" clause.(İÔ¯¥ùÿÿÿÿ8ã²¨÷ú1J$76d399f8-db03-4089-809e-3a350b970438
+
+java:S2095—"GUse try-with-resources or close this "Statement" in a "finally" clause.(İÔ¯¥ùÿÿÿÿ8õ²¨÷ú1J$a641ef2e-93ba-4074-9aa2-ec734b9424eb
+Š
+java:S2095à"GUse try-with-resources or close this "Statement" in a "finally" clause.(Š¢©H8ô²¨÷ú1J$1d9996d9-598b-445c-b1ee-db63a88f03af
+
+java:S2095Œ"GUse try-with-resources or close this "Statement" in a "finally" clause.(™È×¸úÿÿÿÿ8ò²¨÷ú1J$cf3eae79-e518-49a5-8605-dbea2a2fac45
+
+java:S2095‚"GUse try-with-resources or close this "Statement" in a "finally" clause.(İÔ¯¥ùÿÿÿÿ8ó²¨÷ú1J$7051ca63-07fb-4a3f-8898-4cc03d7ca727
+
+java:S2095¶"GUse try-with-resources or close this "Statement" in a "finally" clause.(™È×¸úÿÿÿÿ8î²¨÷ú1J$c884bf12-9617-4bc3-8799-f966a739efa8
+Š
+java:S2095Ÿ"GUse try-with-resources or close this "Statement" in a "finally" clause.(Š¢©H8ğ²¨÷ú1J$35c95cb9-207e-4917-bc98-840cf90098b1
+“
+java:S2095¸"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(İï÷á8ö²¨÷ú1J$98e5775e-d10c-40b8-a177-737de2e8be9f
+
+java:S2095÷"GUse try-with-resources or close this "Statement" in a "finally" clause.(™È×¸úÿÿÿÿ8ì²¨÷ú1J$4d56acef-fca9-47fc-a703-bc3a0eb10719
+
+java:S2095ã"GUse try-with-resources or close this "Statement" in a "finally" clause.(™È×¸úÿÿÿÿ8è²¨÷ú1J$02733251-01fa-4f95-908b-8c4fe9b269ac
+
+java:S2095î"GUse try-with-resources or close this "Statement" in a "finally" clause.(İÔ¯¥ùÿÿÿÿ8ê²¨÷ú1J$38bed945-99b7-437d-9fb5-18d974b3da79
+“
+java:S2095î"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÕŞöÁ8ä²¨÷ú1J$3ba81ec3-9e8f-4183-8e55-28eb1617fc43
+“
+java:S2095‚"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÕŞöÁ8ø²¨÷ú1J$c305bb30-30fa-4cec-b38d-4c460196f067
+™
+java:S3008	"QRename this field "DB_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş¨ô¢ûÿÿÿÿ8…×ØÜú1J$8a02b597-8888-40ad-bb84-d50fe1d5c380
+’
+java:S3008
+"ORename this field "USER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Í»ä8‡×ØÜú1J$426441ff-5e43-42bb-917d-90c59d5a9f8b
+—
+java:S3008"ORename this field "PASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àş‡Ãúÿÿÿÿ8ˆ×ØÜú1J$5e2622fd-6c65-40e4-8d58-f6bf64598734
+
+java:S3008"URename this field "CustomerID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÓâÿÿÿÿÿÿ8îæ…öú1J$1056f773-968f-4758-b4c7-4e3bba3bd9c5
+ 
+java:S3008"XRename this field "ReservationID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òìşÿÿÿÿ8îæ…öú1J$77441ff8-ad9d-49d0-98b7-a4197cdc415e
+m	java:S106"+Replace this use of System.out by a logger.(²½‚ü8øæ…öú1J$5aa7d1ca-f12b-4f25-8ba0-deeb2ff90d91
+l	java:S106"+Replace this use of System.out by a logger.(«¾˜8øæ…öú1J$c98e2796-7c28-4074-bd18-d68d1e063525
+r	java:S106"+Replace this use of System.out by a logger.(ÏÁ¶ûüÿÿÿÿ8ùæ…öú1J$168953f9-9cb7-476e-8e33-429731ba65e7
+m	java:S106 "+Replace this use of System.out by a logger.(”°šÙ8ùæ…öú1J$8df8997c-dba5-4e3e-bd82-d986cf32f6be
+r	java:S106)"+Replace this use of System.out by a logger.(õĞ÷‡ÿÿÿÿÿ8úæ…öú1J$4b027d93-b1bf-4fe2-be50-efd3750211a3
+r	java:S106,"+Replace this use of System.out by a logger.(Û†Úøÿÿÿÿ8úæ…öú1J$ebe40400-af33-4b94-adfe-9e0d1e8a9491
+r	java:S106e"+Replace this use of System.out by a logger.(ÊôÍíşÿÿÿÿ8üæ…öú1J$7c71e6d1-a4f5-4725-a6fb-60049f074f1f
+m	java:S106k"+Replace this use of System.out by a logger.(Éìêã8üæ…öú1J$5ee59148-dd9b-41db-9a29-b2337f6e43db
+r	java:S106l"+Replace this use of System.out by a logger.(°ìªÎşÿÿÿÿ8ıæ…öú1J$51387605-f7d0-49da-8fb9-ce84ce5bc855
+m	java:S106m"+Replace this use of System.out by a logger.(ø“©ä8ıæ…öú1J$723a8e9f-3cae-442c-be29-c09e0355e7ba
+r	java:S106n"+Replace this use of System.out by a logger.(Ğçüùÿÿÿÿ8ıæ…öú1J$d6cd4cb1-ef17-4699-8e8b-680a4626bbdb
+m	java:S106o"+Replace this use of System.out by a logger.(Ó“ö…8ıæ…öú1J$8917cfda-6b96-4931-a9bb-be637963465e
+m	java:S106p"+Replace this use of System.out by a logger.(¬õÆ8ıæ…öú1J$307d2a35-24aa-4afa-bb6c-3e76f74bcd2a
+m	java:S106q"+Replace this use of System.out by a logger.(èàúİ8ıæ…öú1J$d70a32cf-40b9-4310-a750-082eb52669e9
+m	java:S106r"+Replace this use of System.out by a logger.(ñ¯”ó8ıæ…öú1J$a38b4faf-c4ef-4ab8-823c-29933f2d6fb1
+r	java:S106s"+Replace this use of System.out by a logger.(Õ„Öœüÿÿÿÿ8ıæ…öú1J$69807949-410e-45ad-ac6c-ccd9c6af41d8
+l	java:S106t"+Replace this use of System.out by a logger.(öÒ‘8ıæ…öú1J$a22e6ac5-0143-4dc6-a5b3-eef5c4fc7864
+m	java:S106u"+Replace this use of System.out by a logger.(¬¢²Ş8ıæ…öú1J$bd544ffc-9e58-4a76-9049-fadbe4cee6d9
+m	java:S106v"+Replace this use of System.out by a logger.(Ç’ÿ“8ÿæ…öú1J$7498912d-de7c-43ee-b2be-e4ce9a5f4efd
+r	java:S106w"+Replace this use of System.out by a logger.(É¾¬ıÿÿÿÿ8€ç…öú1J$4ccfcc71-af8e-4c21-8695-0cd2169e67f0
+m	java:S106x"+Replace this use of System.out by a logger.(îê°ñ8ç…öú1J$18a7ca63-33f5-49ce-9398-7dbb7010bac7
+m	java:S106y"+Replace this use of System.out by a logger.(œÿƒò8ç…öú1J$44d7f58d-1784-44ba-9aaf-bbd24a48dc47
+m	java:S106z"+Replace this use of System.out by a logger.(¨©Ëæ8‚ç…öú1J$bfbba7ec-8af6-415f-a80f-dbea705c7be1
+n	java:S106"+Replace this use of System.out by a logger.(ì÷âú8„ç…öú1J$b41e6787-67f6-4d67-beb9-011b265244bb
+n	java:S106‘"+Replace this use of System.out by a logger.(Ğş²Ì8‡ç…öú1J$7f15dfbf-fa4b-490f-853d-ec55d3fc6425
+s	java:S106’"+Replace this use of System.out by a logger.(ÓÓÆ²ÿÿÿÿÿ8‡ç…öú1J$59094319-616c-43fd-b54b-1727196609c2
+š
+java:S3457“"Q%n should be used in place of \n to produce the platform-specific line separator.(Šßª“ùÿÿÿÿ8ç…öú1J$2e35c1a3-a3fa-4660-b742-00d2cb151be6
+s	java:S106“"+Replace this use of System.out by a logger.(Šßª“ùÿÿÿÿ8ç…öú1J$3db31bc0-6d49-4e36-aacd-6dda08917597
+s	java:S106•"+Replace this use of System.out by a logger.(ÓÓÆ²ÿÿÿÿÿ8ç…öú1J$d6e51f9b-bc49-45c5-98b6-2e4c02eb0215
+š
+java:S3457œ"Q%n should be used in place of \n to produce the platform-specific line separator.(Šßª“ùÿÿÿÿ8ç…öú1J$da33640d-3ed1-4bf1-8e4b-5bafb660016a
+s	java:S106œ"+Replace this use of System.out by a logger.(Šßª“ùÿÿÿÿ8ç…öú1J$66f0cbc9-bca1-4fb7-bb17-6a93c2658285
+s	java:S106Ÿ"+Replace this use of System.out by a logger.(ÓÓÆ²ÿÿÿÿÿ8ç…öú1J$2a79dd63-3970-4156-bdd2-dd9b4e683ab8
+–
+java:S3776¦"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(å±°8ç…öú1J$9aa84121-2407-4112-8ad5-6c6a01be08b8
+s	java:S106©"+Replace this use of System.out by a logger.(ùâñşÿÿÿÿ8•ç…öú1J$7cb0e438-79d2-4685-a4f9-dad1c3f75dc0
+s	java:S106®"+Replace this use of System.out by a logger.(ù›Âìúÿÿÿÿ8—ç…öú1J$ee4fc89a-80e2-4694-a0fb-2c66b0f6f8c7
+s	java:S106²"+Replace this use of System.out by a logger.(ÁÅñ¹øÿÿÿÿ8—ç…öú1J$1170c6d2-7674-4ec9-93c5-212dcd97580c
+s	java:S106»"+Replace this use of System.out by a logger.(ãØ¤Çûÿÿÿÿ8—ç…öú1J$6cf1f669-050e-4bf9-976b-aa2efd5a5e6c
+s	java:S106Ê"+Replace this use of System.out by a logger.(€ıÿÿÿÿ8—ç…öú1J$6604891e-175d-4f77-b829-74babac49d27
+n	java:S106Õ"+Replace this use of System.out by a logger.(¨¹Ï´8˜ç…öú1J$8a046384-db41-4768-abd2-3b8fb841c95a
+n	java:S106Ø"+Replace this use of System.out by a logger.(ú©8˜ç…öú1J$f5bf4f40-f1c9-4f03-bbc8-0cd95cc36fd5
+n	java:S106İ"+Replace this use of System.out by a logger.(àİ£ª8˜ç…öú1J$31de54e9-7be8-4704-a99a-4c14dcc7f2c3
+s	java:S106á"+Replace this use of System.out by a logger.(¤÷Àªüÿÿÿÿ8˜ç…öú1J$a8034931-9c58-4620-9a86-912252d2fede
+s	java:S106ä"+Replace this use of System.out by a logger.(“‡Ç‘şÿÿÿÿ8˜ç…öú1J$1fc78c64-cf5e-446e-9e4b-8fd5695adcd4
+s	java:S106é"+Replace this use of System.out by a logger.(•íœ®üÿÿÿÿ8™ç…öú1J$f7375b07-0087-4269-a6f1-d3a3c7b96ee2
+s	java:S106ï"+Replace this use of System.out by a logger.(şƒô©şÿÿÿÿ8÷ç…öú1J$03306334-2a2f-45b9-abb5-07a425379b73
+s	java:S106ø"+Replace this use of System.out by a logger.(‡Î™şÿÿÿÿ8–è…öú1J$46fc94d9-b4f1-4067-8867-368c2aeaa1a3
+s	java:S106€"+Replace this use of System.out by a logger.(è¥¨Èúÿÿÿÿ8Ä³¨÷ú1J$d37abe28-8acc-43f5-9faa-075ae2a0f2b1
+s	java:S106œ"+Replace this use of System.out by a logger.(Ï»Èáùÿÿÿÿ8Ú³¨÷ú1J$1fced3d2-c175-42db-9225-39f0ec97df44
+n	java:S106"+Replace this use of System.out by a logger.(ôÏû²8Ş³¨÷ú1J$e8615938-e153-440d-a395-af61411706e6
+s	java:S106¢"+Replace this use of System.out by a logger.(ì÷«úÿÿÿÿ8ä³¨÷ú1J$fd3b11ab-7c01-407b-b39f-642ad0a89fc5
+n	java:S106Ö"+Replace this use of System.out by a logger.(Æ¬·8î³¨÷ú1J$a56d6d73-8881-4d85-95bf-72acaf82d211
+h
+java:S6905ö"Don't use the query "SELECT *".(éüêÁüÿÿÿÿ8Ä×£ûú1J$07b5d25c-0d69-4235-b358-6fe28c072ee2
+s	java:S106û"+Replace this use of System.out by a logger.(Öè…§üÿÿÿÿ8–´¨÷ú1J$5b28dbc7-804a-4185-9162-e20075cf774f
+s	java:S106ı"+Replace this use of System.out by a logger.(­’®÷úÿÿÿÿ8¹´¨÷ú1J$3cf02341-9e4b-4751-998f-742d290e30ee
+h
+java:S6905"Don't use the query "SELECT *".(æ¥êäûÿÿÿÿ8Å×£ûú1J$2bfc8fc3-2e19-42e9-a743-580d55973916
+s	java:S106†"+Replace this use of System.out by a logger.(Ş›³¨ÿÿÿÿÿ8Å×£ûú1J$428c7106-9266-47dd-8394-21da83af1459
+s	java:S106‡"+Replace this use of System.out by a logger.(ÙëÜ“şÿÿÿÿ8Æ×£ûú1J$0d8fb552-9944-4169-9cb6-92bee119dcbb
+•
+java:S3457ˆ"Q%n should be used in place of \n to produce the platform-specific line separator.(€“›‘8Å×£ûú1J$89bbb28a-643d-42dd-a32a-bafa4e16ac6f
+n	java:S106ˆ"+Replace this use of System.out by a logger.(€“›‘8Æ×£ûú1J$ef9d844d-0368-4542-9005-c8a3560f3f2a
+s	java:S106Š"+Replace this use of System.out by a logger.(ÙëÜ“şÿÿÿÿ8Ç×£ûú1J$d84cdefb-03df-4fb4-b5ff-d8351b40879e
+•
+java:S3457•"Q%n should be used in place of \n to produce the platform-specific line separator.(€“›‘8Ç×£ûú1J$bfc0ee04-5787-42fe-a90d-020d9efa69db
+n	java:S106•"+Replace this use of System.out by a logger.(€“›‘8Ç×£ûú1J$ac2b26bf-f8c6-4197-9c23-10de5642cc5b
+s	java:S106˜"+Replace this use of System.out by a logger.(ÙëÜ“şÿÿÿÿ8È×£ûú1J$0a013e89-0e2a-434d-b95b-4e24def0a55a
+s	java:S106š"+Replace this use of System.out by a logger.(ıæî½ıÿÿÿÿ8É×£ûú1J$91e0343e-ccee-42dd-b1b8-fccacc76a238
+s	java:S106­"+Replace this use of System.out by a logger.(ŞÒ—üÿÿÿÿ8É×£ûú1J$1d72f618-3724-4805-9c76-e1862cde19b6
+s	java:S106®"+Replace this use of System.out by a logger.(ï²†Óşÿÿÿÿ8É×£ûú1J$2fe2ac09-7a52-4411-9770-cec6a21365e5
+s	java:S106¯"+Replace this use of System.out by a logger.(ùâñşÿÿÿÿ8É×£ûú1J$21be919a-5a60-404f-b670-ed56d4111074
+n	java:S106±"+Replace this use of System.out by a logger.(ñòÏ 8Ê×£ûú1J$f9870dd9-ac71-4063-ada5-b05b56272f3a
+s	java:S106º"+Replace this use of System.out by a logger.(òŸšÂşÿÿÿÿ8Ê×£ûú1J$b1624f6a-a771-4724-b7ea-f3c009b4a97c
+s	java:S106»"+Replace this use of System.out by a logger.(Š°ñïúÿÿÿÿ8Ë×£ûú1J$a6f8aa04-a2fb-4df7-9f17-34e2f326e685
+s	java:S106¼"+Replace this use of System.out by a logger.(›êÍÜıÿÿÿÿ8Ë×£ûú1J$2126344d-935a-4608-83d4-8a375b12ecd5
+n	java:S106É"+Replace this use of System.out by a logger.(¨•íñ8Ì×£ûú1J$1f0eba17-6f17-4511-8d34-200711410815
+n	java:S106Ó"+Replace this use of System.out by a logger.(ıÿ¯…8Ì×£ûú1J$6435a260-a93a-458a-9c4a-0985e3e65fd8
+n	java:S106Õ"+Replace this use of System.out by a logger.(†ÁÀ¦8Î×£ûú1J$2af6108d-e13f-470d-8085-eafc37ae5f01
+p
+java:S1125Ø"'Remove the unnecessary boolean literal.(‰ÎïÁúÿÿÿÿ8Í×£ûú1J$27ad4b18-4110-4c2e-a07a-21024e1d486b
+s	java:S106æ"+Replace this use of System.out by a logger.(µ«ìßøÿÿÿÿ8Î×£ûú1J$03456656-8710-43db-9270-3c6ab43a910c
+s	java:S106ê"+Replace this use of System.out by a logger.(šÇïùúÿÿÿÿ8Î×£ûú1J$b2c46e30-ad14-4744-8d13-e64218ec48fa
+s	java:S106ğ"+Replace this use of System.out by a logger.(à¯áÜûÿÿÿÿ8Ò×£ûú1J$6e5c3e97-cd4e-44c2-9098-fbd8a014234a
+c
+java:S6905÷"Don't use the query "SELECT *".(¡åÎÃ8ú ¥ûú1J$45a25f54-18c4-42b5-9f8d-f5e50eb11925
+s	java:S106ş"+Replace this use of System.out by a logger.(²—Ÿøÿÿÿÿ8Ò×£ûú1J$341a95c9-60f7-4927-ab7f-26020889186a
+n	java:S106É"+Replace this use of System.out by a logger.(ó®èù8Ó×£ûú1J$baefdb60-288c-4ab7-869f-4089de612f14
+s	java:S106Ğ"+Replace this use of System.out by a logger.(©ÿÃŠıÿÿÿÿ8Ô×£ûú1J$ee69801b-ed5f-42d3-86e9-18ac9ed7167c
+s	java:S106à"+Replace this use of System.out by a logger.(µ«ìßøÿÿÿÿ8Ô×£ûú1J$a22730b6-4ee8-4d87-94ea-dd7fc3e0b7bc
+n	java:S106á"+Replace this use of System.out by a logger.(¸¶µ8Õ×£ûú1J$024ea43e-f464-4f67-a7f1-d186f2a83bb2
+s	java:S106â"+Replace this use of System.out by a logger.(Äïˆ¹ÿÿÿÿÿ8Õ×£ûú1J$6296762e-69e4-48d0-9e8d-65c7cf27f2b0
+s	java:S106å"+Replace this use of System.out by a logger.(³ÚöÉÿÿÿÿÿ8Ö×£ûú1J$b0184e7f-2b71-461b-a59d-75f078d6978a
+s	java:S106ë"+Replace this use of System.out by a logger.(¼à“–şÿÿÿÿ8Ö×£ûú1J$31843491-5c56-4455-b1d4-4befc205ff8d
+c
+java:S6905ğ"Don't use the query "SELECT *".(á“•Ù8Ö×£ûú1J$c5829327-2c4e-4561-9c7f-ccbba9adccb9
+s	java:S106÷"+Replace this use of System.out by a logger.(Ş›³¨ÿÿÿÿÿ8××£ûú1J$f7d5df70-908a-4f15-b755-1deda8699763
+s	java:S106ø"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8××£ûú1J$13948103-4dd2-43d8-b25a-92036c6fe9c4
+•
+java:S3457ù"Q%n should be used in place of \n to produce the platform-specific line separator.(ßÜ°º8××£ûú1J$a593a090-3911-4b16-8314-3a8acbc72062
+n	java:S106ù"+Replace this use of System.out by a logger.(ßÜ°º8ß³¨÷ú1J$63ae0d79-3be4-4d95-a5ba-8283adc70979
+s	java:S106û"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8Ø×£ûú1J$0b0db95c-c020-4c30-968e-e4b352749e79
+š
+java:S3457ı"Q%n should be used in place of \n to produce the platform-specific line separator.(‡§½Ùşÿÿÿÿ8İ³¨÷ú1J$52114063-2db3-4a76-8cd6-fd6c89d30556
+s	java:S106ı"+Replace this use of System.out by a logger.(‡§½Ùşÿÿÿÿ8Ù×£ûú1J$dc4301fb-bdfa-49ba-a0c1-24b27be01bef
+s	java:S106†"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8Û×£ûú1J$bf8c862e-31c2-40c3-8258-4dcef78617ae
+n	java:S106‰"+Replace this use of System.out by a logger.(âñ…Ó8Û×£ûú1J$63dafa11-289c-44fe-ac32-8389d0c08f18
+c
+java:S6905’"Don't use the query "SELECT *".(á“•Ù8Ù×£ûú1J$9357f609-65ec-4c18-a0ba-d571fc8e9128
+…
+java:S1126˜"AReplace this if-then-else statement by a single return statement.(Œ‡Ü‘8Ú×£ûú1J$cc13cc27-e7d9-4c76-b51c-29772d390523
+s	java:S106¨"+Replace this use of System.out by a logger.(ŞÒ—üÿÿÿÿ8Û×£ûú1J$08676226-7e77-4c32-b43f-658b1f8f51d4
+s	java:S106©"+Replace this use of System.out by a logger.(ìûÂ½üÿÿÿÿ8Û×£ûú1J$ec19e0d1-626d-455f-a2c2-a07162c42895
+s	java:S106ª"+Replace this use of System.out by a logger.(ùâñşÿÿÿÿ8Ü×£ûú1J$7c3bb6be-6b22-4f01-81c1-a078d7b95285
+n	java:S106¬"+Replace this use of System.out by a logger.(ñòÏ 8İ×£ûú1J$b8663c53-7ff6-4266-bb25-455c2831b411
+n	java:S106¸"+Replace this use of System.out by a logger.(½ã‚8İ×£ûú1J$f920af06-98a2-4dec-9bfb-8b745f8924af
+n	java:S106º"+Replace this use of System.out by a logger.(¬°ú·8Ş×£ûú1J$58d93c17-3997-4039-b378-d266ab38f667
+s	java:S106½"+Replace this use of System.out by a logger.(Œ¯¤ôÿÿÿÿÿ8ß×£ûú1J$44793fdf-f9d8-4c72-a962-5f066764f8b8
+s	java:S106Ä"+Replace this use of System.out by a logger.(Üğùÿÿÿÿ8à×£ûú1J$d454a812-6fda-4ed3-a305-66c8d6d39d13
+h
+java:S6905â"Don't use the query "SELECT *".(Ü„»ğøÿÿÿÿ8ß×£ûú1J$ad0afd24-390e-475d-ade0-3ccaa2accc10
+n	java:S106ç"+Replace this use of System.out by a logger.(†‡äı8à×£ûú1J$8b8e7ae6-4e0e-4d08-bab9-401c7dd309b9
+n	java:S106é"+Replace this use of System.out by a logger.(°Ö™›8á×£ûú1J$7a8f9631-783a-4a01-9be4-000bd606f349
+h
+java:S6905í"Don't use the query "SELECT *".(´ùËéşÿÿÿÿ8à×£ûú1J$498c4f31-5047-45ed-82b9-4709c588e0f2
+s	java:S106ò"+Replace this use of System.out by a logger.(Ş›³¨ÿÿÿÿÿ8â×£ûú1J$160863d1-66ce-423a-adda-1c09a3db0972
+s	java:S106ó"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8â×£ûú1J$ea845fcf-8a46-403e-bcd0-1b76f1caaca5
+”
+java:S3457ô"Q%n should be used in place of \n to produce the platform-specific line separator.(ÜÚÃ8á×£ûú1J$9cd50fe9-7f3e-409b-a570-56420af1ade0
+\
+java:S3457ô"9th argument is not used.(ÜÚÃ8á×£ûú1J$0998be00-d68d-4626-98b1-9107e9973a79
+m	java:S106ô"+Replace this use of System.out by a logger.(ÜÚÃ8ã×£ûú1J$114801c6-2bd5-4925-ab39-ce5d556f6af0
+s	java:S106ö"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8ä×£ûú1J$635eb06a-a3d3-43ca-9016-46d1880b7a28
+”
+java:S3457‚"Q%n should be used in place of \n to produce the platform-specific line separator.(ÜÚÃ8ã×£ûú1J$a8f17b8f-ddb7-4fc2-b1a8-cab588b8dd22
+\
+java:S3457‚"9th argument is not used.(ÜÚÃ8ã×£ûú1J$b9eab73c-f99f-484f-a852-6124a34465a2
+m	java:S106‚"+Replace this use of System.out by a logger.(ÜÚÃ8ä×£ûú1J$e8f80b46-998e-44dd-8673-117211c8a340
+s	java:S106…"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8å×£ûú1J$683dfd7d-1db9-4584-9e7b-9b9c6fd88f4d
+n	java:S106‡"+Replace this use of System.out by a logger.(Ä©Ø¤8æ×£ûú1J$4071ea5f-aed3-4212-9e3f-53ec60ee00a6
+s	java:S106—"+Replace this use of System.out by a logger.(¥´¤°úÿÿÿÿ8ç×£ûú1J$72d43d76-e375-4875-a771-4cddcf5ba5ef
+c
+java:S6905µ"Don't use the query "SELECT *".(®‰ÓŒ8æ×£ûú1J$dc551a6c-6a7e-491c-aaf4-d3b166011291
+s	java:S106º"+Replace this use of System.out by a logger.(à¤èÈùÿÿÿÿ8è×£ûú1J$95bd3afb-a39a-4881-a98b-d895bce064f3
+n	java:S106¼"+Replace this use of System.out by a logger.(—È­©8è×£ûú1J$0b6c409a-f997-4594-ae77-23d9a225779d
+h
+java:S6905Á"Don't use the query "SELECT *".(ƒßÿõøÿÿÿÿ8ç×£ûú1J$6530a89e-5b4c-4c02-958e-d3fb50120263
+s	java:S106Æ"+Replace this use of System.out by a logger.(Ş›³¨ÿÿÿÿÿ8é×£ûú1J$a63fb93c-e624-47c3-8028-99b2a823cb04
+s	java:S106Ç"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8é×£ûú1J$5b603f2b-7e0a-4828-8daf-be23a91c6a26
+š
+java:S3457È"Q%n should be used in place of \n to produce the platform-specific line separator.(ôïİÉüÿÿÿÿ8è×£ûú1J$f5850dc7-9ace-45b7-83b8-25f7b97b4c43
+b
+java:S3457È"9th argument is not used.(ôïİÉüÿÿÿÿ8è×£ûú1J$b555e1c1-c947-4400-978a-3b6f5fd7252f
+s	java:S106È"+Replace this use of System.out by a logger.(ôïİÉüÿÿÿÿ8ê×£ûú1J$6bafc515-21fb-4f2d-b1a7-0d32787af440
+s	java:S106Ê"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8ë×£ûú1J$c8ac6a2b-739f-4bbc-ac7b-784f50dba620
+š
+java:S3457Ö"Q%n should be used in place of \n to produce the platform-specific line separator.(ôïİÉüÿÿÿÿ8ê×£ûú1J$ff5c016e-ba79-4e76-82b7-aaa227737162
+b
+java:S3457Ö"9th argument is not used.(ôïİÉüÿÿÿÿ8ê×£ûú1J$d279dc17-a0f6-4d05-ade0-8e7bcf640370
+s	java:S106Ö"+Replace this use of System.out by a logger.(ôïİÉüÿÿÿÿ8ë×£ûú1J$91bbf302-b867-4cd1-bf20-29728b3fa930
+s	java:S106Ù"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8í×£ûú1J$51df74bd-f2b7-44f7-8a45-73bef5b832e4
+n	java:S106Û"+Replace this use of System.out by a logger.(âñ…Ó8î×£ûú1J$0b1f78cd-e5f3-4a77-be13-52ffe48f5491
+‰
+java:S1854¤"@Remove this useless assignment to local variable "customerName".(“Ã†§ÿÿÿÿÿ8ì×£ûú1J$7dc583e0-8466-487a-ac79-a10ec939ae09
+n	java:S106ë"+Replace this use of System.out by a logger.(¤©†İ8£´¨÷ú1J$5b97e66f-361f-40a2-8110-ca2e518ed0cf
+m	java:S106ğ"+Replace this use of System.out by a logger.(¤ñ8î×£ûú1J$c9450eb0-e0f8-4573-a012-4ff95ace136b
+n	java:S106ô"+Replace this use of System.out by a logger.(´éö·8ï×£ûú1J$cb265aa6-7268-4f79-ba93-3186e6c7308e
+n	java:S106ö"+Replace this use of System.out by a logger.(¬ŒÜ·8ï×£ûú1J$2172a9ae-5e53-4a22-9986-df4d55e364eb
+c
+java:S6905‹"Don't use the query "SELECT *".(Ñè—â8ï×£ûú1J$f1aea3b8-786f-4a4b-bd45-a1562627ed07
+n	java:S106"+Replace this use of System.out by a logger.(¶ºÿ´8ğ×£ûú1J$87ba5112-86c8-4d3a-918f-e8ec2548dab5
+n	java:S106’"+Replace this use of System.out by a logger.(‚´ñ—8ñ×£ûú1J$6f00522d-3706-4eff-8add-cbaf5fd80b04
+h
+java:S6905–"Don't use the query "SELECT *".(ÛÏ½«üÿÿÿÿ8ğ×£ûú1J$6106096d-d0bc-4e2f-8d33-db2570d973a6
+s	java:S106›"+Replace this use of System.out by a logger.(†ñàşÿÿÿÿ8ñ×£ûú1J$cd1dca1c-e18b-4a74-9b69-30aad5ab63b2
+s	java:S106œ"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8ò×£ûú1J$9f1037b6-ecde-46dd-94c5-a197acae97d6
+”
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ÉàöV8ñ×£ûú1J$73f50270-311d-47ed-9a0d-28a75bddbf85
+\
+java:S3457"8th argument is not used.(ÉàöV8ñ×£ûú1J$95033343-ed6c-4813-a91c-abdf085e878a
+m	java:S106"+Replace this use of System.out by a logger.(ÉàöV8ô×£ûú1J$c01bc717-66d0-4600-b30b-36454a9ae109
+s	java:S106Ÿ"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8ô×£ûú1J$3be4929c-82be-4e6b-bd65-f653f4afeedd
+z
+java:S1481¤"1Remove this unused "customerName" local variable.(“Ã†§ÿÿÿÿÿ8ò×£ûú1J$2309798b-3d05-4e4b-8f66-9613b58e45a0
+”
+java:S3457ª"Q%n should be used in place of \n to produce the platform-specific line separator.(ÉàöV8ó×£ûú1J$b6679099-eca3-43d1-b2b5-0ca102776914
+\
+java:S3457ª"8th argument is not used.(ÉàöV8ó×£ûú1J$cac9a287-299e-4049-a910-da8be0f79330
+m	java:S106ª"+Replace this use of System.out by a logger.(ÉàöV8õ×£ûú1J$e49c7d92-622a-49ff-a0df-62bd81287959
+s	java:S106­"+Replace this use of System.out by a logger.(«§†Áüÿÿÿÿ8õ×£ûú1J$898a00f3-3454-4c6c-b5ee-c868f878f67c
+n	java:S106Á"+Replace this use of System.out by a logger.(Üí‚8ö×£ûú1J$0e09d81f-3fa0-40d2-b951-5813e8306f89
+n	java:S106Â"+Replace this use of System.out by a logger.(³‘Š×8ö×£ûú1J$39e21e09-57bc-46e0-9df9-ea06274b67a9
+š
+java:S3457Ã"Q%n should be used in place of \n to produce the platform-specific line separator.(ÎÍŞÑùÿÿÿÿ8õ×£ûú1J$33a8ce4c-18c8-4c61-b186-bbe3d65d8474
+s	java:S106Ã"+Replace this use of System.out by a logger.(ÎÍŞÑùÿÿÿÿ8÷×£ûú1J$1a78096c-6634-4a5f-ab6b-777cff1c5d72
+n	java:S106Ä"+Replace this use of System.out by a logger.(³‘Š×8÷×£ûú1J$29ced2c8-7f73-4339-8847-d9649b99d735
+•
+java:S3457Ë"Q%n should be used in place of \n to produce the platform-specific line separator.(½§­Š8÷×£ûú1J$d9341e29-1043-4946-98c9-025f298e0f4e
+n	java:S106Ë"+Replace this use of System.out by a logger.(½§­Š8Í´¨÷ú1J$168e7037-340c-4a46-8dc2-ca5f904f371b
+n	java:S106Í"+Replace this use of System.out by a logger.(³‘Š×8ú×£ûú1J$0d82eb0a-8693-47f6-b6c7-349d1dc199be
+n	java:S106Ï"+Replace this use of System.out by a logger.(ùö‹²8ú×£ûú1J$50515e0e-1b14-49a8-8770-b566353a3125
+n	java:S106ö"+Replace this use of System.out by a logger.(¼ ğ¶8û×£ûú1J$9fcd2d3d-ec2e-4934-ac09-7df199cf8055
+s	java:S106‚"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8û×£ûú1J$cd784d99-c9a8-4192-ad1d-4588652f4fc3
+š
+java:S3457ƒ"Q%n should be used in place of \n to produce the platform-specific line separator.(îŸ’üÿÿÿÿ8û×£ûú1J$6f2eb33d-b2c2-469e-a1c3-3dfa87066db8
+s	java:S106ƒ"+Replace this use of System.out by a logger.(îŸ’üÿÿÿÿ8ü×£ûú1J$1d852785-2ac5-416d-8676-03acff69dfd4
+s	java:S106„"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8ü×£ûú1J$ff1fa237-bc3b-4d62-9ec8-9626a9609bb8
+š
+java:S3457‰"Q%n should be used in place of \n to produce the platform-specific line separator.(–å—µûÿÿÿÿ8ü×£ûú1J$7b580fd0-6ca7-4344-be19-156f1940c917
+s	java:S106‰"+Replace this use of System.out by a logger.(–å—µûÿÿÿÿ8ı×£ûú1J$acc22bd7-b107-416d-b309-cfcadcc26953
+s	java:S106‹"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8ş×£ûú1J$3f5204c4-911f-4650-a709-7720acfbe54b
+n	java:S106–"+Replace this use of System.out by a logger.(… ĞÓ8ş×£ûú1J$81b48e9d-e0b5-49c1-a9ff-8032e412986a
+s	java:S106£"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8ÿ×£ûú1J$8586d9d9-f9f6-4fdf-9027-ed901e1deeff
+š
+java:S3457¤"Q%n should be used in place of \n to produce the platform-specific line separator.(ï´ıöùÿÿÿÿ8ş×£ûú1J$ee92666b-bd16-4a48-9b4a-01fa21f1d25a
+s	java:S106¤"+Replace this use of System.out by a logger.(ï´ıöùÿÿÿÿ8ÿ×£ûú1J$7f62453a-f780-4085-ad54-9535810ed52b
+s	java:S106¥"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8€Ø£ûú1J$3389acbb-1c26-420f-9c7c-01fb7fe904dd
+š
+java:S3457ª"Q%n should be used in place of \n to produce the platform-specific line separator.(úúïÃøÿÿÿÿ8ÿ×£ûú1J$b7dbd9de-8f7c-4960-95c4-7aa15418d23d
+s	java:S106ª"+Replace this use of System.out by a logger.(úúïÃøÿÿÿÿ8€Ø£ûú1J$eb6fe90e-d02f-4835-8a13-3d8313acd8f7
+s	java:S106¬"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8Ø£ûú1J$b6e7fb84-270e-4416-a756-124eb79db946
+s	java:S106·"+Replace this use of System.out by a logger.(ã‹‡‹ÿÿÿÿÿ8Ø£ûú1J$fc2c2665-078f-4c74-8710-b85cea82b579
+s	java:S106Ã"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8‚Ø£ûú1J$53c1a778-b4b0-47ab-b3d5-da929bc1a4a6
+•
+java:S3457Ä"Q%n should be used in place of \n to produce the platform-specific line separator.(Õš•¢8Ø£ûú1J$e100eafe-d37b-4609-a55d-ae404e7f8482
+n	java:S106Ä"+Replace this use of System.out by a logger.(Õš•¢8‚Ø£ûú1J$e6b61f3f-a108-47a0-b49e-ba8c2659456b
+s	java:S106Å"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8ƒØ£ûú1J$455c922a-f332-4470-a2a2-11ca954c1d3a
+•
+java:S3457Ê"Q%n should be used in place of \n to produce the platform-specific line separator.(¤ıº8‚Ø£ûú1J$dce5bef0-0bd6-45c7-92cd-b537420a116f
+n	java:S106Ê"+Replace this use of System.out by a logger.(¤ıº8ƒØ£ûú1J$3a2e6d51-eef7-498f-b7b3-e97ac9cff75e
+s	java:S106Ì"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8„Ø£ûú1J$82479964-87fe-42c8-8881-67131ccfd289
+n	java:S106×"+Replace this use of System.out by a logger.(¦³ıú8„Ø£ûú1J$7fe67704-4eb3-452b-b24f-2e4dfc3181c7
+s	java:S106ã"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8…Ø£ûú1J$68ff6ca9-dd65-4f39-9b8d-b6af83b0aeee
+š
+java:S3457ä"Q%n should be used in place of \n to produce the platform-specific line separator.(ñ­Âºÿÿÿÿÿ8„Ø£ûú1J$af8b94d8-1cd5-4e47-b7dc-048295c1b6e3
+s	java:S106ä"+Replace this use of System.out by a logger.(ñ­Âºÿÿÿÿÿ8†Ø£ûú1J$bc4ffb14-2786-4f46-8335-5e0e071ca739
+s	java:S106å"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8†Ø£ûú1J$62c4c08b-7b0e-49a9-81f2-3361b339e0af
+•
+java:S3457ê"Q%n should be used in place of \n to produce the platform-specific line separator.(·í®Ñ8…Ø£ûú1J$11ea47d7-9f2c-421c-b5d0-08c1ebb3d42c
+n	java:S106ê"+Replace this use of System.out by a logger.(·í®Ñ8†Ø£ûú1J$564d303c-ca81-4c34-a6c8-c83f76e236f8
+s	java:S106í"+Replace this use of System.out by a logger.(°Öüÿÿÿÿ8‡Ø£ûú1J$c40e109d-5c21-46b2-a3f2-49492d4a3626
+n	java:S106÷"+Replace this use of System.out by a logger.(Ô¯”Œ8ˆØ£ûú1J$1fd3ad89-d308-490f-b3c8-e358ea736d43
+n	java:S106…	"+Replace this use of System.out by a logger.(© éó8ˆØ£ûú1J$3bc62360-1766-4b8a-a746-4ec5ded749fd
+š
+java:S3457†	"Q%n should be used in place of \n to produce the platform-specific line separator.(É™È„ıÿÿÿÿ8‡Ø£ûú1J$54925986-afb2-48a5-ab9f-1d353b7081b2
+s	java:S106†	"+Replace this use of System.out by a logger.(É™È„ıÿÿÿÿ8‰Ø£ûú1J$0d09e856-7e41-4bd2-b932-61acf284c671
+n	java:S106‡	"+Replace this use of System.out by a logger.(© éó8‰Ø£ûú1J$d25b6c16-3d68-489b-a440-9f952d796afc
+š
+java:S3457	"Q%n should be used in place of \n to produce the platform-specific line separator.(àş¾¯ÿÿÿÿÿ8ˆØ£ûú1J$3161014b-db7b-4a10-b4c5-6a087b7d2660
+s	java:S106	"+Replace this use of System.out by a logger.(àş¾¯ÿÿÿÿÿ8ˆ¢¥ûú1J$4e52d8f7-4d54-4f7e-939a-a0a54cc90935
+H	java:S106	"+Replace this use of System.out by a logger.(© éó8¸§±ûú1

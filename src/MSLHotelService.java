@@ -174,7 +174,7 @@ public class MSLHotelService {
                 System.out.println("The Customer ID does not exist");
                 return;
             }
-            
+
             System.out.print("Enter Room ID:");
             int roomID = scanner.nextInt();
             scanner.nextLine(); // Consume newline character
@@ -188,7 +188,7 @@ public class MSLHotelService {
                 return;
             } else {
                 String sqlGetRoomPrice = "SELECT Price FROM Room WHERE RoomID = ?";
-                String sqlGetRoomCapacity = "SELECT Capacity FROM RoomType WHERE RoomID = ?";
+                String sqlGetRoomCapacity = "SELECT Capacity FROM RoomType WHERE RoomTypeID = (SELECT RoomTypeID FROM Room WHERE RoomID = ?)";
 
                 try (PreparedStatement pstmtGetRoomPrice = conn.prepareStatement(sqlGetRoomPrice)) {
                     pstmtGetRoomPrice.setInt(1, roomID);
@@ -212,26 +212,39 @@ public class MSLHotelService {
                 }
                 System.out.println("Maximum occupancy for the selected room: " + roomCapacity);
             }
-            
+
             System.out.print("Number of people staying: ");
             int peopleNum = scanner.nextInt();
             scanner.nextLine(); // Consume newline character
-            
-            if(peopleNum > roomCapacity) {
+
+            if (peopleNum > roomCapacity) {
                 System.out.println("The number of people exceeds the maximum occupancy of the selected room");
                 return;
             }
-            
+
             System.out.print("Enter Check-In Date (YYYY-MM-DD): ");
             String checkInDate = scanner.nextLine();
 
             System.out.print("Enter Check-Out Date (YYYY-MM-DD): ");
             String checkOutDate = scanner.nextLine();
-            
+
+            // Check if the customer has already booked the same room for the same dates
+            if (isDuplicateReservation(conn, customerID, roomID, checkInDate, checkOutDate)) {
+                System.out.println("The customer has already booked this room for the selected dates.");
+                return;
+            }
+
+            // Check if the customer has already booked this room for overlapping dates
+            if (isOverlappingReservation(conn, customerID, roomID, checkInDate, checkOutDate)) {
+                System.out.println("The customer has already booked this room for the overlapping dates.");
+                return;
+            }
+
+
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             long daysBetween = ChronoUnit.DAYS.between(LocalDate.parse(checkInDate, formatter), LocalDate.parse(checkOutDate, formatter));
             int totalPrice = roomPrice * (int) daysBetween;
-            
+
             System.out.print("Include breakfast? (true/false):");
             boolean isBreakfast = scanner.nextBoolean();
             scanner.nextLine(); // Consume newline character
@@ -253,7 +266,7 @@ public class MSLHotelService {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-                
+
                 // Insert reservation information into the database
                 String sqlInsertReservation = "INSERT INTO Reservation (ReservationID, CustomerID, RoomID, CheckInDate, CheckOutDate, PeopleNum, TotalPrice, IsBreakfast) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                 try (PreparedStatement pstmtInsertReservation = conn.prepareStatement(sqlInsertReservation)) {
@@ -280,6 +293,47 @@ public class MSLHotelService {
             e.printStackTrace();
         }
     }
+
+    // Duplicate reservation check
+    public static boolean isDuplicateReservation(Connection conn, String customerID, int roomID, String checkInDate, String checkOutDate) {
+        try {
+            String sql = "SELECT COUNT(*) FROM Reservation WHERE CustomerID = ? AND RoomID = ? AND CheckInDate = ? AND CheckOutDate = ?";
+            try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.setString(1, customerID);
+                pstmt.setInt(2, roomID);
+                pstmt.setString(3, checkInDate);
+                pstmt.setString(4, checkOutDate);
+                ResultSet rs = pstmt.executeQuery();
+                if (rs.next()) {
+                    return rs.getInt(1) > 0;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static boolean isOverlappingReservation(Connection conn, String customerID, int roomID, String checkInDate, String checkOutDate) {
+        try {
+            String sql = "SELECT COUNT(*) FROM Reservation WHERE CustomerID = ? AND RoomID = ? AND NOT (CheckOutDate <= ? OR CheckInDate >= ?)";
+            try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.setString(1, customerID);
+                pstmt.setInt(2, roomID);
+                pstmt.setString(3, checkInDate);
+                pstmt.setString(4, checkOutDate);
+                ResultSet rs = pstmt.executeQuery();
+                if (rs.next()) {
+                    return rs.getInt(1) > 0;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
 
     // 예약 검색
     public static void searchReservation(Connection conn) {
@@ -463,8 +517,8 @@ public class MSLHotelService {
 	    return true;  // No conflicting reservation found
 	}
 
-		
-	//체크인,체크아웃 날짜 변경 시 가격 다시 계
+
+	//체크인,체크아웃 날짜 변경 시 가격 다시 계산
 	public static int computeTotalPrice(int ReservationID, String checkInDate, String checkOutDate) {
 		
 		int result = 0;
