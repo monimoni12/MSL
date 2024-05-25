@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9f1f081-5cd7-48df-bc63-1a6f2dc55797" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/2567947ff3fb7172edf23a705f6b4ffecdc4d3c6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7fabc41e2331254939faa48b4a83368db75f6ab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/5/2567947ff3fb7172edf23a705f6b4ffecdc4d3c6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/7/b7fabc41e2331254939faa48b4a83368db75f6ab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSL.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e680a1c4-1a91-4529-95f5-eea7d9fbadca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e680a1c4-1a91-4529-95f5-eea7d9fbadca.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e680a1c4-1a91-4529-95f5-eea7d9fbadca/storage_v2/_src_/schema/jdbc.-7IxAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e680a1c4-1a91-4529-95f5-eea7d9fbadca/storage_v2/_src_/schema/jdbc.-7IxAA.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB_MSL_jar.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database_MSL/bin/MSLHotelService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database_MSL/src/MSLHotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MSLHotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +181,7 @@
       <workItem from="1716472982200" duration="1725000" />
       <workItem from="1716513686121" duration="914000" />
       <workItem from="1716514611572" duration="961000" />
-      <workItem from="1716570633743" duration="16168000" />
+      <workItem from="1716570633743" duration="17369000" />
     </task>
     <servers />
   </component>
