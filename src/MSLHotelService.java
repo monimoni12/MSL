@@ -131,9 +131,9 @@ public class MSLHotelService {
 
             String sql;
             if ("*".equals(searchName)) {
-                sql = "SELECT CustomerID, CustomerName, DateOfBirth, Address, PhoneNumber, `Index` FROM Customers";
+                sql = "SELECT CustomerID, CustomerName, DateOfBirth, Address, PhoneNumber FROM Customers";
             } else {
-                sql = "SELECT CustomerID, CustomerName, DateOfBirth, Address, PhoneNumber, `Index` FROM Customers WHERE CustomerName = ?";
+                sql = "SELECT CustomerID, CustomerName, DateOfBirth, Address, PhoneNumber FROM Customers WHERE CustomerName = ?";
             }
 
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
